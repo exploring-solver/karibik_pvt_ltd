@@ -20,6 +20,7 @@ function Home() {
   return (
     <div className=" bg-zinc-200">
       {/* <h1 className="text-3xl font-bold mb-5">Welcome to CatalogCraft</h1> */}
+
       <Slider {...settings}>
         <div className=''>
           <div className=''>
@@ -47,10 +48,10 @@ function Home() {
       </Slider>
       <br /><br />
       <div id='about' className='flex w-[80%] mx-auto flex-wrap'>
-        <div className='about-img mr-[10%]'>
-          <img src="SAILOR.jpg" alt="" />
+        <div className='about-img mr-[10%] hover:'>
+          <img src="SAILOR.jpg" alt="" className='' />
         </div>
-        <div className='about-content w-[70%]'>
+        <div className='about-content w-[50%]'>
           <h1 className='text-2xl font-semibold border-b-2 py-3'>ABOUT MERCHANT NAVY INSTITUTE & TRAINING CENTER</h1>
           <hr className='py-[2px] w-[20%] bg-yellow-500' />
           <br /><p className='text-sm leading-[1.75]'>

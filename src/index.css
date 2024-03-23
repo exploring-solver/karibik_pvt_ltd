@@ -106,3 +106,9 @@
     line-height: 88px;
   }
 }
+
+.navbar-lower {
+  position: sticky;
+  top: 0;
+  transition: top 0.3s;
+}
