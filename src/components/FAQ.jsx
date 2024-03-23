@@ -25,6 +25,8 @@ const FAQ = () => {
         <p className="text-gray-700">There are various types of ships but the main job of a ship is to transport goods or people from one place to another...</p>
       </div>
     </div>
+    
+    
   );
 };
 
