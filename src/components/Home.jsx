@@ -48,8 +48,8 @@ function Home() {
       </Slider>
       <br /><br />
       <div id='about' className='flex w-[80%] mx-auto flex-wrap'>
-        <div className='about-img mr-[10%] hover:'>
-          <img src="SAILOR.jpg" alt="" className='' />
+        <div className='about-img mr-[10%] '>
+          <img src="SAILOR.jpg" alt="" className=''/>
         </div>
         <div className='about-content w-[50%]'>
           <h1 className='text-2xl font-semibold border-b-2 py-3'>ABOUT MERCHANT NAVY INSTITUTE & TRAINING CENTER</h1>

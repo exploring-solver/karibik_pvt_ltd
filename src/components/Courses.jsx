@@ -32,8 +32,8 @@ const Course = ({ title, description }) => {
       <div className="mr-4">
         <img src="Courses.jpg" alt="Course" className="mr-[10%]" />
       </div>
-      <div className='w-[300px]'>
-        <h2 className="text-xl font-bold mb-2">{title}</h2>
+      <div className='w-[400px]'>
+        <h2 className="text-xl font-semibold mb-2">{title}</h2>
         <p className="text-sm">{description}</p>
       </div>
     </div>
