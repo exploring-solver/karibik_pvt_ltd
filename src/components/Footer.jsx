@@ -10,6 +10,7 @@ const Footer = () => {
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1753.7139973565565!2d77.02189762880936!3d28.4666546334174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d182d4d8f3085%3A0xf0b2597e3d8e4628!2sNew%20Colony%20%2F%20Subhash%20Nagar!5e0!3m2!1sen!2sin!4v1711214923167!5m2!1sen!2sin"
             width="200"
+            title='location'
             height="150"
             allowfullscreen=""
             loading="lazy"
