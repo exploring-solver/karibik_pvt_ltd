@@ -1,15 +1,72 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Apply = () => {
+  const [formData, setFormData] = useState({
+    programme_to_apply: '',
+    candidate_name: '',
+    mobile_no: '',
+    date_of_birth: '',
+    alternate_mobile_no: '',
+    age: '',
+    email_id: '',
+    gender: '',
+    photo: null,
+    'tenth_percentage': '',
+    'twelfth_percentage': '',
+  });
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value, type } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === 'file' ? e.target.files[0] : value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const formDataToSend = new FormData();
+      for (const key in formData) {
+        formDataToSend.append(key, formData[key]);
+      }
+
+      const response = await fetch('http://panel.mait.ac.in:8021/api/submit/', {
+        method: 'POST',
+        body: formDataToSend,
+      });
+      const data = await response.json();
+      console.log('Form submitted:', data);
+      if (response.status === 200) {
+        setShowModal(true);
+      }
+      if (response.status === 400) {
+        alert('Please re-check the details you are trying in submit.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Please check the details again.');
+    }
+  };
+
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
+
   return (
     <div className="mx-10 p-6">
       <h2 className="text-2xl font-bold mb-1">CANDIDATE ENROLLMENT FORM</h2>
       <div className='bg-yellow-500 w-[10%] py-[1px]'></div>
       <div className='flex flex-wrap justify-between'>
-        <form className='md:w-[50%]'>
+        <form className='md:w-[50%] ' onSubmit={handleSubmit}>
+
           <div className="mb-4">
-            <label htmlFor="post_apply" className="block font-semibold">Programme to which admission is sought:</label>
-            <select id="post_apply" name="post_apply" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1">
+            <label htmlFor="programme_to_apply" className="block font-semibold">Programme to which admission is sought:</label>
+            <select id="programme_to_apply" name="programme_to_apply" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" onChange={handleChange} required >
               <option value="">Programme to which admission is sought:</option>
               <option value="SDP-3">SDP-3</option>
               <option value="G. P. Rating">G. P. Rating</option>
@@ -24,31 +81,31 @@ const Apply = () => {
           </div>
           <div className="mb-4">
             <label htmlFor="candidate_name" className="block font-semibold">Name:</label>
-            <input type="text" id="candidate_name" name="candidate_name" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Name" />
+            <input type="text" id="candidate_name" name="candidate_name" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Name" onChange={handleChange} required  />
           </div>
           <div className="mb-4">
             <label htmlFor="mobile_no" className="block font-semibold">Mobile:</label>
-            <input type="text" id="mobile_no" name="mobile_no" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Mobile" />
+            <input onChange={handleChange} required  type="text" id="mobile_no" name="mobile_no" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Mobile" />
           </div>
           <div className="mb-4">
             <label htmlFor="date_of_birth" className="block font-semibold">Date Of Birth (dd-mm-yyyy):</label>
-            <input type="date" id="date_of_birth" name="date_of_birth" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Date Of Birth (dd-mm-yyyy)" />
+            <input type="date" id="date_of_birth" name="date_of_birth" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Date Of Birth (dd-mm-yyyy)" onChange={handleChange} required  />
           </div>
           <div className="mb-4">
             <label htmlFor="alternate_mobile_no" className="block font-semibold">Alternate No.:</label>
-            <input type="text" id="alternate_mobile_no" name="alternate_mobile_no" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Alternate No." />
+            <input type="text" id="alternate_mobile_no" name="alternate_mobile_no" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Alternate No." onChange={handleChange} required  />
           </div>
           <div className="mb-4">
             <label htmlFor="age" className="block font-semibold">Age:</label>
-            <input type="number" id="age" name="age" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Age" readOnly />
+            <input type="number" id="age" name="age" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Age" onChange={handleChange} required  />
           </div>
           <div className="mb-4">
             <label htmlFor="email_id" className="block font-semibold">Email Id:</label>
-            <input type="email" id="email_id" name="email_id" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Email Id" />
+            <input type="email" id="email_id" name="email_id" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Email Id" onChange={handleChange} required  />
           </div>
           <div className="mb-4">
             <label htmlFor="gender" className="block font-semibold">Select Gender:</label>
-            <select id="gender" name="gender" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1">
+            <select id="gender" name="gender" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" onChange={handleChange} required >
               <option value="">Select Gender</option>
               <option value="MALE">MALE</option>
               <option value="FEMALE">FEMALE</option>
@@ -57,15 +114,15 @@ const Apply = () => {
           </div>
           <div className="mb-4">
             <label htmlFor="photo" className="block font-semibold">Profile Picture (Size: 200*200 pixels):</label>
-            <input type="file" id="photo" name="photo" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" />
+            <input type="file" id="photo" name="photo" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" onChange={handleChange} required  />
           </div>
           <div className="mb-4">
-            <label htmlFor="10th_percentage" className="block font-semibold">10th Class Percentage Marks:</label>
-            <input type="text" id="10th_percentage" name="10th_percentage" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="10th Class Percentage Marks" />
+            <label htmlFor="tenth_percentage" className="block font-semibold">10th Class Percentage Marks:</label>
+            <input type="text" id="tenth_percentage" name="tenth_percentage" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="10th Class Percentage Marks" onChange={handleChange} required  />
           </div>
           <div className="mb-4">
-            <label htmlFor="12th_percentage" className="block font-semibold">12th Class Percentage Marks:</label>
-            <input type="text" id="12th_percentage" name="12th_percentage" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="12th Class Percentage Marks" />
+            <label htmlFor="twelfth_percentage" className="block font-semibold">12th Class Percentage Marks:</label>
+            <input type="text" id="twelfth_percentage" name="twelfth_percentage" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="12th Class Percentage Marks" onChange={handleChange} required  />
           </div>
           <br />
           <button type="submit" className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border w-full border-gray-400 rounded shadow">Submit</button>
@@ -99,7 +156,28 @@ const Apply = () => {
           </div>
         </div>
       </div>
+      {showModal && (
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-500 bg-opacity-75">
+          <div className="bg-white p-8 rounded shadow-lg text-center  flex flex-col justify-center items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-6 h-6"
+            >
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
 
+            <p>Your application is submitted successfully. Our team will get back to you shortly. <br /> Please keep checking you mails. <br /> Thank you for choosing Karibik Maritime Academy.</p>
+            <a href="/home" className="block mt-4 text-blue-500 underline" onClick={closeModal}>Go to Home</a>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

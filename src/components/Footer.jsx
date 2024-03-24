@@ -12,9 +12,9 @@ const Footer = () => {
             width="200"
             title='location'
             height="150"
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
 
         </div>
@@ -39,9 +39,9 @@ const Footer = () => {
         <div id='contact' className='flex flex-col gap-2'>
           <h1 className='font-semibold italic'>HOW TO REACH US ?</h1>
           <hr className='py-[1px] w-[20%] mb-6 bg-yellow-500' />
-          <p className='w-[150px]'><i class="fa fa-map-marker" aria-hidden="true"></i>  Mukund Pura Road, New Market, Bhakrota, Ajmer Road, Jaipur (Rajasthan) – 302026</p>
-          <p className=''><i class="fa fa-phone" aria-hidden="true"></i>  +91 8384038007</p>
-          <p><i class="fa fa-envelope" aria-hidden="true"></i>  mail@gmail.com</p>
+          <p className='w-[150px]'><i className="fa fa-map-marker" aria-hidden="true"></i>  Mukund Pura Road, New Market, Bhakrota, Ajmer Road, Jaipur (Rajasthan) – 302026</p>
+          <p className=''><i className="fa fa-phone" aria-hidden="true"></i>  +91 8384038007</p>
+          <p><i className="fa fa-envelope" aria-hidden="true"></i>  mail@gmail.com</p>
         </div>
       </div>
       <br />
