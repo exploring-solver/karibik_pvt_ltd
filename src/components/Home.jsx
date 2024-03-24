@@ -70,7 +70,7 @@ function Home() {
         <br />
         <div className='flex flex-col md:flex-row md:flex-wrap gap-2'>
           <div className="courses flex lg:w-[45%]">
-            <div className='mr-[10%]'><img src="merchant-about.jpeg" className='' alt="" /></div>
+            <div className='mr-[10%]'><img src="Courses1.jpg" className='' alt="" /></div>
             <div className='w-[70%]'>
               <h1 className='font-semibold text-lg'>SDP</h1>
               <p className='text-gray-700 text-sm w-[200px]'>The PRE SEA TRAINING Course was introduced on request from the shopping industry.</p>
@@ -79,7 +79,7 @@ function Home() {
             </div>
           </div>
           <div className="courses flex lg:w-[45%]">
-            <div className='mr-[10%]'><img src="merchant-about.jpeg" className='' alt="" /></div>
+            <div className='mr-[10%]'><img src="Courses4.jpg" className='' alt="" /></div>
             <div className='w-[70%]'>
               <h1 className='font-semibold text-lg'>SDP</h1>
               <p className='text-gray-700 text-sm w-[200px]'>The PRE SEA TRAINING Course was introduced on request from the shopping industry.</p>
@@ -88,7 +88,7 @@ function Home() {
             </div>
           </div>
           <div className="courses flex lg:w-[45%]">
-            <div className='mr-[10%]'><img src="merchant-about.jpeg" className='' alt="" /></div>
+            <div className='mr-[10%]'><img src="Courses5.jpg" className='' alt="" /></div>
             <div className='w-[70%]'>
               <h1 className='font-semibold text-lg'>SDP</h1>
               <p className='text-gray-700 text-sm w-[200px]'>The PRE SEA TRAINING Course was introduced on request from the shopping industry.</p>
@@ -97,7 +97,7 @@ function Home() {
             </div>
           </div>
           <div className="courses flex lg:w-[45%]">
-            <div className='mr-[10%]'><img src="merchant-about.jpeg" className='' alt="" /></div>
+            <div className='mr-[10%]'><img src="Courses6.jpg" className='' alt="" /></div>
             <div className='w-[70%]'>
               <h1 className='font-semibold text-lg'>SDP</h1>
               <p className='text-gray-700 text-sm w-[200px]'>The PRE SEA TRAINING Course was introduced on request from the shopping industry.</p>
@@ -169,28 +169,28 @@ function Home() {
         <br />
         <div className='flex flex-wrap gap-2'>
           <div className='bg-white hover:bg-[#00E6F6] hover:cursor-pointer flex lg:w-[45%] justify-between'>
-            <img src="SAILOR.jpg" alt="" className='w-40 mr-[10%]' />
+            <img src="1.png" alt="" className='w-40 mr-[10%]' />
             <div className='flex flex-col justify-center pr-10 '>
               <h1 className=' font-semibold'>TYPES OF SHIPS</h1>
               <p className='text-xs w-[80%]'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, quas doloremque dolor culpa quia natus est voluptate asperiores omnis inventore.</p>
             </div>
           </div>
           <div className='bg-white hover:bg-[#00E6F6] hover:cursor-pointer flex lg:w-[45%] justify-between'>
-            <img src="SAILOR.jpg" alt="" className='w-40 mr-[10%]' />
+            <img src="2.png" alt="" className='w-40 mr-[10%]' />
             <div className='flex flex-col justify-center pr-10 '>
               <h1 className=' font-semibold'>TYPES OF SHIPS</h1>
               <p className='text-xs w-[80%]'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, quas doloremque dolor culpa quia natus est voluptate asperiores omnis inventore.</p>
             </div>
           </div>
           <div className='bg-white hover:bg-[#00E6F6] hover:cursor-pointer flex lg:w-[45%] justify-between'>
-            <img src="SAILOR.jpg" alt="" className='w-40 mr-[10%]' />
+            <img src="3.png" alt="" className='w-40 mr-[10%]' />
             <div className='flex flex-col justify-center pr-10 '>
               <h1 className=' font-semibold'>TYPES OF SHIPS</h1>
               <p className='text-xs w-[80%]'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, quas doloremque dolor culpa quia natus est voluptate asperiores omnis inventore.</p>
             </div>
           </div>
           <div className='bg-white hover:bg-[#00E6F6] hover:cursor-pointer flex lg:w-[45%] justify-between'>
-            <img src="SAILOR.jpg" alt="" className='w-40 mr-[10%]' />
+            <img src="4.png" alt="" className='w-40 mr-[10%]' />
             <div className='flex flex-col justify-center pr-10 '>
               <h1 className=' font-semibold'>TYPES OF SHIPS</h1>
               <p className='text-xs w-[80%]'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, quas doloremque dolor culpa quia natus est voluptate asperiores omnis inventore.</p>

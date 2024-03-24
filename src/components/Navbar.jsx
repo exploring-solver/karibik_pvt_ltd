@@ -21,7 +21,7 @@ const Navbar = () => {
       </nav>
       <div className='text-lg font-semibold text-black bg-zinc-200 pt-3 sticky top-0 z-30'>
         <div className="flex flex-wrap items-start sticky top-0">
-          <Link to="/home" className=" hover:text-blue-500 px-3 border-r-[1px] border-dashed border-gray-700 my-2 ">HOME</Link>
+          <Link to="/" className=" hover:text-blue-500 px-3 border-r-[1px] border-dashed border-gray-700 my-2 ">HOME</Link>
           <Link to="/about" className=" hover:text-blue-500 px-3 border-r-[1px] border-dashed border-gray-700 my-2 ">ABOUT US</Link>
           <Link to="/courses" className=" hover:text-blue-500 px-3 border-r-[1px] border-dashed border-gray-700 my-2 ">COURSES</Link>
           <Link to="/placement" className=" hover:text-blue-500 px-3 border-r-[1px] border-dashed border-gray-700 my-2 ">PLACEMENT</Link>

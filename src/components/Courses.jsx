@@ -11,14 +11,17 @@ const Courses = () => {
           <Course
             title="Seafarers Development Programmer (SDP)"
             description="The PRE SEA TRAINING Course was introduced on request from the Shipping Industry, in order to ensure enhanced & multiple utility of ratings, on board vessels belonging to shipping companies, worldwide."
+            img='Courses1.jpg'
           />
           <Course
             title="Orientation Course For Catering Personnel (OCCP)"
             description="Pass in 10th standard or above from recognized board with 40% aggregate and 40% in English subject either in 10th or (10+2) and Diploma/Degree Certificate in Hotel Management."
+            img='Courses4.jpg'
           />
           <Course
             title="General Purpose Rating"
             description="Pass in 10th standard or above from recognised board with 40% aggregate and 40% in English subject either in 10th or (10+2)"
+            img='Courses5.jpg'
           />
         </div>
       </div>
@@ -26,11 +29,11 @@ const Courses = () => {
   );
 }
 
-const Course = ({ title, description }) => {
+const Course = ({ title, description,img }) => {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md flex items-center justify-between">
       <div className="mr-4">
-        <img src="Courses.jpg" alt="Course" className="mr-[10%]" />
+        <img src={img} alt="Course" className="mr-[10%]" />
       </div>
       <div className='w-[400px]'>
         <h2 className="text-xl font-semibold mb-2">{title}</h2>
