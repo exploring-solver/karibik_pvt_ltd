@@ -10,6 +10,7 @@ import Placement from './components/Placement';
 import Courses from './components/Courses';
 import Contact from './components/Contact';
 import NotFound from './components/NotFound';
+import CourseDetails from './components/CourseDetails';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/placement" element={<Placement />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/courses/:courseNumber" element={<CourseDetails />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
