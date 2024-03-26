@@ -49,7 +49,7 @@ function Home() {
       <br /><br />
       <div id='about' className='flex w-[80%] mx-auto flex-wrap'>
         <div className='about-img mr-[10%] '>
-          <img src="SAILOR.jpg" alt="" className=''/>
+          <img src="SAILOR.jpg" alt="" className='' />
         </div>
         <div className='about-content w-[50%]'>
           <h1 className='text-2xl font-semibold border-b-2 py-3'>ABOUT MERCHANT NAVY INSTITUTE & TRAINING CENTER</h1>
@@ -81,8 +81,8 @@ function Home() {
           <div className="courses flex lg:w-[45%]">
             <div className='mr-[10%]'><img src="Courses4.jpg" className='' alt="" /></div>
             <div className='w-[70%]'>
-              <h1 className='font-semibold text-lg'>SDP</h1>
-              <p className='text-gray-700 text-sm w-[200px]'>The PRE SEA TRAINING Course was introduced on request from the shopping industry.</p>
+              <h1 className='font-semibold text-lg'>OCCP</h1>
+              <p className='text-gray-700 text-sm w-[200px]'>Pass in 10th standard or above from recognised board with 40% aggregate and 40% in English subject either in 10th or (10+2)</p>
               <br />
               <button className='bg-yellow-500 p-2 font-semibold'>READ MORE </button>
             </div>
@@ -90,7 +90,7 @@ function Home() {
           <div className="courses flex lg:w-[45%]">
             <div className='mr-[10%]'><img src="Courses5.jpg" className='' alt="" /></div>
             <div className='w-[70%]'>
-              <h1 className='font-semibold text-lg'>SDP</h1>
+              <h1 className='font-semibold text-lg'>CCMC</h1>
               <p className='text-gray-700 text-sm w-[200px]'>The PRE SEA TRAINING Course was introduced on request from the shopping industry.</p>
               <br />
               <button className='bg-yellow-500 p-2 font-semibold'>READ MORE </button>
@@ -99,7 +99,7 @@ function Home() {
           <div className="courses flex lg:w-[45%]">
             <div className='mr-[10%]'><img src="Courses6.jpg" className='' alt="" /></div>
             <div className='w-[70%]'>
-              <h1 className='font-semibold text-lg'>SDP</h1>
+              <h1 className='font-semibold text-lg'>GPR</h1>
               <p className='text-gray-700 text-sm w-[200px]'>The PRE SEA TRAINING Course was introduced on request from the shopping industry.</p>
               <br />
               <button className='bg-yellow-500 p-2 font-semibold'>READ MORE </button>
@@ -115,9 +115,31 @@ function Home() {
           <div className='flex flex-wrap w-[85%]  text-white '>
             <div className='w-[300px]'>
               <div className='flex items-center gap-2 '>
-                <i class="fa fa-book" aria-hidden="true"></i>
+                <i className="fa fa-book text-cyan-300" aria-hidden="true"></i>
                 <div className=''>
                   <h1 className='font-semibold'>APPLY ONLINE</h1>
+                  <hr className='py-[1px] w-[20%] bg-yellow-700' />
+                </div>
+              </div>
+              <p className='text-sm w-[200px] text-gray-400'>Apply Online 10+ Years Of Experience. Approved Course. </p>
+
+            </div>
+            <div className='w-[300px]'>
+              <div className='flex items-center gap-2 '>
+                <i className="fa fa-book text-cyan-300" aria-hidden="true"></i>
+                <div className=''>
+                  <h1 className='font-semibold'>PAY ONLINE</h1>
+                  <hr className='py-[1px] w-[20%] bg-yellow-700' />
+                </div>
+              </div>
+              <p className='text-sm w-[200px] text-gray-400'>The fees is to be paid online with the general candidates..</p>
+
+            </div>
+            <div className='w-[300px]'>
+              <div className='flex items-center gap-2 '>
+                <i className="fa fa-book text-cyan-300" aria-hidden="true"></i>
+                <div className=''>
+                  <h1 className='font-semibold'>OUR COURSES</h1>
                   <hr className='py-[1px] w-[20%] bg-yellow-700' />
                 </div>
               </div>
@@ -126,31 +148,9 @@ function Home() {
             </div>
             <div className='w-[300px]'>
               <div className='flex items-center gap-2 '>
-                <i class="fa fa-book" aria-hidden="true"></i>
+                <i className="fa fa-book text-cyan-300" aria-hidden="true"></i>
                 <div className=''>
-                  <h1 className='font-semibold'>APPLY ONLINE</h1>
-                  <hr className='py-[1px] w-[20%] bg-yellow-700' />
-                </div>
-              </div>
-              <p className='text-sm w-[200px] text-gray-400'>Available courses are gp rating, gme, dns, btech, eto, etc.</p>
-
-            </div>
-            <div className='w-[300px]'>
-              <div className='flex items-center gap-2 '>
-                <i class="fa fa-book" aria-hidden="true"></i>
-                <div className=''>
-                  <h1 className='font-semibold'>APPLY ONLINE</h1>
-                  <hr className='py-[1px] w-[20%] bg-yellow-700' />
-                </div>
-              </div>
-              <p className='text-sm w-[200px] text-gray-400'>Available courses are gp rating, gme, dns, btech, eto, etc.</p>
-
-            </div>
-            <div className='w-[300px]'>
-              <div className='flex items-center gap-2 '>
-                <i class="fa fa-book" aria-hidden="true"></i>
-                <div className=''>
-                  <h1 className='font-semibold'>APPLY ONLINE</h1>
+                  <h1 className='font-semibold'>GET A QUERY</h1>
                   <hr className='py-[1px] w-[20%] bg-yellow-700' />
                 </div>
               </div>
@@ -171,29 +171,32 @@ function Home() {
           <div className='bg-white hover:bg-[#00E6F6] hover:cursor-pointer flex lg:w-[45%] justify-between'>
             <img src="1.png" alt="" className='w-40 mr-[10%]' />
             <div className='flex flex-col justify-center pr-10 '>
-              <h1 className=' font-semibold'>TYPES OF SHIPS</h1>
-              <p className='text-xs w-[80%]'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, quas doloremque dolor culpa quia natus est voluptate asperiores omnis inventore.</p>
+              <h1 className=' font-semibold'>WHAT IS MERCHANT NAVY
+              </h1>
+              <p className='text-xs w-[80%]'>The term “merchant navy” means a fleet of commercial ships that are not used for military purpose.</p>
             </div>
           </div>
           <div className='bg-white hover:bg-[#00E6F6] hover:cursor-pointer flex lg:w-[45%] justify-between'>
             <img src="2.png" alt="" className='w-40 mr-[10%]' />
             <div className='flex flex-col justify-center pr-10 '>
-              <h1 className=' font-semibold'>TYPES OF SHIPS</h1>
-              <p className='text-xs w-[80%]'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, quas doloremque dolor culpa quia natus est voluptate asperiores omnis inventore.</p>
+              <h1 className=' font-semibold'>10 REASONS TO JOIN</h1>
+              <p className='text-xs w-[80%]'>
+Our people and culture are redefining what it means to be a professional services firm.</p>
             </div>
           </div>
           <div className='bg-white hover:bg-[#00E6F6] hover:cursor-pointer flex lg:w-[45%] justify-between'>
             <img src="3.png" alt="" className='w-40 mr-[10%]' />
             <div className='flex flex-col justify-center pr-10 '>
               <h1 className=' font-semibold'>TYPES OF SHIPS</h1>
-              <p className='text-xs w-[80%]'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, quas doloremque dolor culpa quia natus est voluptate asperiores omnis inventore.</p>
+              <p className='text-xs w-[80%]'>Detailed information and links regarding Container ships, Bulk carriers, Tankers, Ferries, Cruise ships, etc.</p>
             </div>
           </div>
           <div className='bg-white hover:bg-[#00E6F6] hover:cursor-pointer flex lg:w-[45%] justify-between'>
             <img src="4.png" alt="" className='w-40 mr-[10%]' />
             <div className='flex flex-col justify-center pr-10 '>
-              <h1 className=' font-semibold'>TYPES OF SHIPS</h1>
-              <p className='text-xs w-[80%]'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, quas doloremque dolor culpa quia natus est voluptate asperiores omnis inventore.</p>
+              <h1 className=' font-semibold'>CAREER COMPARISON
+</h1>
+              <p className='text-xs w-[80%]'>Working at sea is a very exciting experience; your life style will be entirely different.</p>
             </div>
           </div>
         </div>

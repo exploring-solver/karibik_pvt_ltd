@@ -134,9 +134,12 @@ const Apply = () => {
           <br />
           <div className='flex flex-col gap-2'>
             <div className='bg-gray-300 text-black font-medium py-2 px-3 hover:bg-[#00E6F6] hover:cursor-pointer'>
-              <p>SEAFERERS DEVELOPMENT</p>
+              <p>ORIENTATION COURSE FOR </p>
               <br />
-              <p>PROGRAMMER(SDP)</p>
+              <p>CATERING PERSONNEL (OCCP)</p>
+            </div>
+            <div className='bg-gray-300 text-black font-medium py-2 px-3 hover:bg-[#00E6F6] hover:cursor-pointer'>
+              <p>GENERAL PURPOSE RATING</p>
             </div>
             <div className='bg-gray-300 text-black font-medium py-2 px-3 hover:bg-[#00E6F6] hover:cursor-pointer'>
               <p>SEAFERERS DEVELOPMENT</p>
@@ -144,14 +147,19 @@ const Apply = () => {
               <p>PROGRAMMER(SDP)</p>
             </div>
             <div className='bg-gray-300 text-black font-medium py-2 px-3 hover:bg-[#00E6F6] hover:cursor-pointer'>
-              <p>SEAFERERS DEVELOPMENT</p>
-              <br />
-              <p>PROGRAMMER(SDP)</p>
+              <p>CERTIFICATE COURSE IN MARITIME CATERING</p>
             </div>
             <div className='bg-gray-300 text-black font-medium py-2 px-3 hover:bg-[#00E6F6] hover:cursor-pointer'>
-              <p>SEAFERERS DEVELOPMENT</p>
-              <br />
-              <p>PROGRAMMER(SDP)</p>
+              <p>ELECTRO TECHNICAL OFFICER</p>
+            </div>
+            <div className='bg-gray-300 text-black font-medium py-2 px-3 hover:bg-[#00E6F6] hover:cursor-pointer'>
+              <p>BSC NAUTICAL SCIENCE</p>
+            </div>
+            <div className='bg-gray-300 text-black font-medium py-2 px-3 hover:bg-[#00E6F6] hover:cursor-pointer'>
+              <p>GRADUATE IN MARINE ENGINEERING</p>
+            </div>
+            <div className='bg-gray-300 text-black font-medium py-2 px-3 hover:bg-[#00E6F6] hover:cursor-pointer'>
+              <p>MARINE ENGINEERING</p>
             </div>
           </div>
         </div>
