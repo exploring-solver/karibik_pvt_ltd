@@ -61,11 +61,12 @@ const Apply = () => {
     <div className="mx-10 p-6">
       <h2 className="text-2xl font-bold mb-1">CANDIDATE ENROLLMENT FORM</h2>
       <div className='bg-yellow-500 w-[10%] py-[1px]'></div>
+      <br />
       <div className='flex flex-wrap justify-between'>
         <form className='md:w-[50%] ' onSubmit={handleSubmit}>
-
           <div className="mb-4">
-            <label htmlFor="programme_to_apply" className="block font-semibold">Programme to which admission is sought:</label>
+            <label htmlFor="programme_to_apply" className="block font-semibold">Fill the form and receive your admit card in mail.
+              <br />Programme to which admission is sought:</label>
             <select id="programme_to_apply" name="programme_to_apply" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" onChange={handleChange} required >
               <option value="">Programme to which admission is sought:</option>
               <option value="SDP-3">SDP-3</option>
@@ -81,27 +82,27 @@ const Apply = () => {
           </div>
           <div className="mb-4">
             <label htmlFor="candidate_name" className="block font-semibold">Name:</label>
-            <input type="text" id="candidate_name" name="candidate_name" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Name" onChange={handleChange} required  />
+            <input type="text" id="candidate_name" name="candidate_name" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Name" onChange={handleChange} required />
           </div>
           <div className="mb-4">
             <label htmlFor="mobile_no" className="block font-semibold">Mobile:</label>
-            <input onChange={handleChange} required  type="text" id="mobile_no" name="mobile_no" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Mobile" />
+            <input onChange={handleChange} required type="text" id="mobile_no" name="mobile_no" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Mobile" />
           </div>
           <div className="mb-4">
             <label htmlFor="date_of_birth" className="block font-semibold">Date Of Birth (dd-mm-yyyy):</label>
-            <input type="date" id="date_of_birth" name="date_of_birth" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Date Of Birth (dd-mm-yyyy)" onChange={handleChange} required  />
+            <input type="date" id="date_of_birth" name="date_of_birth" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Date Of Birth (dd-mm-yyyy)" onChange={handleChange} required />
           </div>
           <div className="mb-4">
             <label htmlFor="alternate_mobile_no" className="block font-semibold">Alternate No.:</label>
-            <input type="text" id="alternate_mobile_no" name="alternate_mobile_no" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Alternate No." onChange={handleChange} required  />
+            <input type="text" id="alternate_mobile_no" name="alternate_mobile_no" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Alternate No." onChange={handleChange} required />
           </div>
           <div className="mb-4">
             <label htmlFor="age" className="block font-semibold">Age:</label>
-            <input type="number" id="age" name="age" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Age" onChange={handleChange} required  />
+            <input type="number" id="age" name="age" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Age" onChange={handleChange} required />
           </div>
           <div className="mb-4">
             <label htmlFor="email_id" className="block font-semibold">Email Id:</label>
-            <input type="email" id="email_id" name="email_id" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Email Id" onChange={handleChange} required  />
+            <input type="email" id="email_id" name="email_id" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Email Id" onChange={handleChange} required />
           </div>
           <div className="mb-4">
             <label htmlFor="gender" className="block font-semibold">Select Gender:</label>
@@ -114,15 +115,15 @@ const Apply = () => {
           </div>
           <div className="mb-4">
             <label htmlFor="photo" className="block font-semibold">Profile Picture (Size: 200*200 pixels):</label>
-            <input type="file" id="photo" name="photo" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" onChange={handleChange} required  />
+            <input type="file" id="photo" name="photo" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" onChange={handleChange} required />
           </div>
           <div className="mb-4">
             <label htmlFor="tenth_percentage" className="block font-semibold">10th Class Percentage Marks:</label>
-            <input type="text" id="tenth_percentage" name="tenth_percentage" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="10th Class Percentage Marks" onChange={handleChange} required  />
+            <input type="text" id="tenth_percentage" name="tenth_percentage" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="10th Class Percentage Marks" onChange={handleChange} required />
           </div>
           <div className="mb-4">
             <label htmlFor="twelfth_percentage" className="block font-semibold">12th Class Percentage Marks:</label>
-            <input type="text" id="twelfth_percentage" name="twelfth_percentage" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="12th Class Percentage Marks" onChange={handleChange} required  />
+            <input type="text" id="twelfth_percentage" name="twelfth_percentage" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="12th Class Percentage Marks" onChange={handleChange} required />
           </div>
           <br />
           <button type="submit" className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border w-full border-gray-400 rounded shadow">Submit</button>

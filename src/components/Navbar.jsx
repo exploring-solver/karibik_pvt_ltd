@@ -11,7 +11,7 @@ const Navbar = () => {
             <Link to="/" className="text-2xl px-3 py-2 my-2 w-[230px] text-white font-bold font-mono">Karibik India<span className='text-cyan-400 font-bold'> Maritime Academy</span></Link>
           </div>
           <div className=" flex justify-end text-xs  text-white ">
-            <Link to="/admit-card" className=" hover:text-yellow-400 px-3 py-2 my-2 border-r-[1px] font-semibold">ADMIT CARD</Link>
+            <Link to="/apply" className=" hover:text-yellow-400 px-3 py-2 my-2 border-r-[1px] font-semibold">ADMIT CARD</Link>
             <Link to="/result" className=" hover:text-yellow-400 px-3 py-2 my-2 border-r-[1px] font-semibold">RESULT</Link>
             <Link to="/news-and-events" className=" hover:text-yellow-400 px-3 py-2 my-2 border-r-[1px] font-semibold">NEWS AND EVENTS</Link>
             <Link to="/contact" className=" hover:text-yellow-400 px-3 py-2 my-2 border-r-[1px] font-semibold">CONTACT US</Link>
