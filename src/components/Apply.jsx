@@ -62,9 +62,9 @@ const Apply = () => {
       <h2 className="text-2xl font-bold mb-1">CANDIDATE ENROLLMENT FORM</h2>
       <div className='bg-yellow-500 w-[10%] py-[1px]'></div>
       <br />
-      <div action="post" enctype="multipart/form-data" data-netlify="true" className='flex flex-wrap justify-between'>
+      <div className='flex flex-wrap justify-between'>
         {/* Form  */}
-        <form name="enrollment" method="POST" data-netlify="true">
+        <form action="post" enctype="multipart/form-data" data-netlify="true" >
           <div className="mb-4">
             <label htmlFor="programme_to_apply" className="block font-semibold">Fill the form and receive your admit card in mail.
               <br />Programme to which admission is sought:</label>
