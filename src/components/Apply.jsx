@@ -64,7 +64,7 @@ const Apply = () => {
       <br />
       <div action="post" enctype="multipart/form-data" data-netlify="true" className='flex flex-wrap justify-between'>
         {/* Form  */}
-        <form name="enrollment" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
+        <form name="enrollment" method="POST" data-netlify="true">
           <div className="mb-4">
             <label htmlFor="programme_to_apply" className="block font-semibold">Fill the form and receive your admit card in mail.
               <br />Programme to which admission is sought:</label>
@@ -127,7 +127,7 @@ const Apply = () => {
             <input type="text" id="twelfth_percentage" name="twelfth_percentage" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="12th Class Percentage Marks" onChange={handleChange} required />
           </div>
           <br />
-          <div data-netlify-recaptcha="true"></div>
+          {/* <div data-netlify-recaptcha="true"></div> */}
           <button type="submit" className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border w-full border-gray-400 rounded shadow">Submit</button>
         </form>
 
