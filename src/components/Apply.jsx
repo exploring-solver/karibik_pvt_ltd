@@ -62,8 +62,9 @@ const Apply = () => {
       <h2 className="text-2xl font-bold mb-1">CANDIDATE ENROLLMENT FORM</h2>
       <div className='bg-yellow-500 w-[10%] py-[1px]'></div>
       <br />
-      <div action="post" data-netlify="true" className='flex flex-wrap justify-between'>
-        <form className='md:w-[50%] ' netli>
+      <div action="post" enctype="multipart/form-data" data-netlify="true" className='flex flex-wrap justify-between'>
+        {/* Form  */}
+        <form name="enrollment" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
           <div className="mb-4">
             <label htmlFor="programme_to_apply" className="block font-semibold">Fill the form and receive your admit card in mail.
               <br />Programme to which admission is sought:</label>
@@ -130,6 +131,8 @@ const Apply = () => {
           <button type="submit" className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border w-full border-gray-400 rounded shadow">Submit</button>
         </form>
 
+
+        {/* Courses  */}
         <div className='md:w-[30%] pt-0 md:pt-10'>
           <h1 className="text-3xl font-bold  mb-8">COURSES</h1>
           <div className='bg-yellow-500 w-[40%] py-[2px]'></div>
