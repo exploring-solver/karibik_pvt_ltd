@@ -33,7 +33,7 @@ const Apply = () => {
         formDataToSend.append(key, formData[key]);
       }
 
-      const response = await fetch('http://panel.mait.ac.in:8021/api/submit/', {
+      const response = await fetch('https://chanmeet.pythonanywhere.com/api/submit/', {
         method: 'POST',
         body: formDataToSend,
       });
@@ -62,8 +62,8 @@ const Apply = () => {
       <h2 className="text-2xl font-bold mb-1">CANDIDATE ENROLLMENT FORM</h2>
       <div className='bg-yellow-500 w-[10%] py-[1px]'></div>
       <br />
-      <div className='flex flex-wrap justify-between'>
-        <form className='md:w-[50%] ' onSubmit={handleSubmit}>
+      <div action="post" data-netlify="true" className='flex flex-wrap justify-between'>
+        <form className='md:w-[50%] ' netli>
           <div className="mb-4">
             <label htmlFor="programme_to_apply" className="block font-semibold">Fill the form and receive your admit card in mail.
               <br />Programme to which admission is sought:</label>
@@ -126,6 +126,7 @@ const Apply = () => {
             <input type="text" id="twelfth_percentage" name="twelfth_percentage" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="12th Class Percentage Marks" onChange={handleChange} required />
           </div>
           <br />
+          <div data-netlify-recaptcha="true"></div>
           <button type="submit" className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border w-full border-gray-400 rounded shadow">Submit</button>
         </form>
 
