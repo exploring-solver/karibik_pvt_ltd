@@ -36,7 +36,7 @@ const Apply = () => {
       }
 
       const response = await fetch('https://chanmeet.pythonanywhere.com/api/submit/', {
-        method: 'POST',
+        method: 'POST', 
         body: formDataToSend,
       });
       const data = await response.json();
