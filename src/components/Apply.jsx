@@ -25,31 +25,31 @@ const Apply = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const formDataToSend = new FormData();
-      for (const key in formData) {
-        formDataToSend.append(key, formData[key]);
-      }
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const formDataToSend = new FormData();
+  //     for (const key in formData) {
+  //       formDataToSend.append(key, formData[key]);
+  //     }
 
-      const response = await fetch('https://chanmeet.pythonanywhere.com/api/submit/', {
-        method: 'POST',
-        body: formDataToSend,
-      });
-      const data = await response.json();
-      console.log('Form submitted:', data);
-      if (response.status === 200) {
-        setShowModal(true);
-      }
-      if (response.status === 400) {
-        alert('Please re-check the details you are trying in submit.');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('Please check the details again.');
-    }
-  };
+  //     const response = await fetch('https://chanmeet.pythonanywhere.com/api/submit/', {
+  //       method: 'POST',
+  //       body: formDataToSend,
+  //     });
+  //     const data = await response.json();
+  //     console.log('Form submitted:', data);
+  //     if (response.status === 200) {
+  //       setShowModal(true);
+  //     }
+  //     if (response.status === 400) {
+  //       alert('Please re-check the details you are trying in submit.');
+  //     }
+  //   } catch (error) {
+  //     console.error('Error submitting form:', error);
+  //     alert('Please check the details again.');
+  //   }
+  // };
 
 
   const closeModal = () => {
