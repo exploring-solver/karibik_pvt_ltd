@@ -31,7 +31,7 @@ const Contact = () => {
         <div className="mt-6 w-[30%]">
           <p className="mb-2">Office No.3 G.F- 571/1 Adrash nagar new railway road sector-12 Gurgaon Haryana 122001</p>
           <hr className="border-t border-gray-300 my-2" />
-          <p className="mb-2">k.i.m.academy0001@gmail.com</p>
+          <p className="mb-2">karibikindiamaritimeacademy0001@gmail.com</p>
           <hr className="border-t border-gray-300 my-2" />
           <p className="mb-2">+91 7048911197 , +91 8384038007</p>
         </div>

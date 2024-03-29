@@ -40,7 +40,7 @@ const Footer = () => {
           <hr className='py-[1px] w-[20%] mb-6 bg-yellow-500' />
           <p className='w-[150px]'><i className="fa fa-map-marker" aria-hidden="true"></i>  Office No.3 G.F- 571/1 Adrash nagar new railway road sector-12 Gurgaon Haryana 122001</p>
           <p className=''><i className="fa fa-phone" aria-hidden="true"></i>  +91 7048911197 , +91 8384038007</p>
-          <p><i className="fa fa-envelope" aria-hidden="true"></i>  k.i.m.academy0001@gmail.com</p>
+          <p><i className="fa fa-envelope" aria-hidden="true"></i> karibikindiamaritimeacademy@gmail.com</p>
         </div>
       </div>
       <br />
