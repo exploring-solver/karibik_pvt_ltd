@@ -16,6 +16,7 @@ const Apply = () => {
   });
 
   const [showModal, setShowModal] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type } = e.target;
@@ -25,36 +26,40 @@ const Apply = () => {
     });
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const formDataToSend = new FormData();
-  //     for (const key in formData) {
-  //       formDataToSend.append(key, formData[key]);
-  //     }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const formDataToSend = new FormData();
+      for (const key in formData) {
+        formDataToSend.append(key, formData[key]);
+      }
 
-  //     const response = await fetch('https://chanmeet.pythonanywhere.com/api/submit/', {
-  //       method: 'POST',
-  //       body: formDataToSend,
-  //     });
-  //     const data = await response.json();
-  //     console.log('Form submitted:', data);
-  //     if (response.status === 200) {
-  //       setShowModal(true);
-  //     }
-  //     if (response.status === 400) {
-  //       alert('Please re-check the details you are trying in submit.');
-  //     }
-  //   } catch (error) {
-  //     console.error('Error submitting form:', error);
-  //     alert('Please check the details again.');
-  //   }
-  // };
+      const response = await fetch('https://chanmeet.pythonanywhere.com/api/submit/', {
+        method: 'POST',
+        body: formDataToSend,
+      });
+      const data = await response.json();
+      console.log('Form submitted:', data);
+      if (response.status === 200) {
+        setShowModal(true);
+      }
+      if (response.status === 400) {
+        alert('Please re-check the details you are trying in submit.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Please check the details again.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
 
   const closeModal = () => {
     setShowModal(false);
   };
+
 
 
   return (
@@ -64,7 +69,8 @@ const Apply = () => {
       <br />
       <div className='flex flex-wrap justify-between'>
         {/* Form  */}
-        <form action="post" enctype="multipart/form-data" data-netlify="true" >
+        {/* <form action="post" enctype="multipart/form-data" data-netlify="true" > */}
+        <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label htmlFor="programme_to_apply" className="block font-semibold">Fill the form and receive your admit card in mail.
               <br />Programme to which admission is sought:</label>
@@ -128,7 +134,16 @@ const Apply = () => {
           </div>
           <br />
           {/* <div data-netlify-recaptcha="true"></div> */}
-          <button type="submit" className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border w-full border-gray-400 rounded shadow">Submit</button>
+          <button type="submit" disabled={loading} className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border w-full border-gray-400 rounded shadow">
+            {loading ? (
+              <svg className="animate-spin h-5 w-5 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V2.5A1.5 1.5 0 0113.5 1h-3A1.5 1.5 0 019 2.5V4a8 8 0 018 8h1.5a1.5 1.5 0 110 3H17a8 8 0 01-8 8v1.5a1.5 1.5 0 11-3 0V17a8 8 0 01-8-8H2.5a1.5 1.5 0 110-3H4z"></path>
+              </svg>
+            ) : (
+              "Submit"
+            )}
+          </button>
         </form>
 
 
@@ -187,7 +202,7 @@ const Apply = () => {
             </svg>
 
             <p>Your application is submitted successfully. Our team will get back to you shortly. <br /> Please keep checking you mails. <br /> Thank you for choosing Karibik Maritime Academy.</p>
-            <a href="/home" className="block mt-4 text-blue-500 underline" onClick={closeModal}>Go to Home</a>
+            <a href="/" className="block mt-4 text-blue-500 underline" onClick={closeModal}>Go to Home</a>
           </div>
         </div>
       )}
