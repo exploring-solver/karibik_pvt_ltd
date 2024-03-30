@@ -29,11 +29,10 @@ const Footer = () => {
         <div id='campus' className='flex flex-col gap-2 text-white'>
           <h1 className='font-bold italic'>OUR CAMPUS</h1>
           <hr className='py-[1px] w-[40%] mb-6 bg-yellow-500' />
-          <p>Jaipur</p>
-          <p>Gujarat</p>
-          <p>Mumbai</p>
+          <p>Gurgaon</p>
           <p>Chennai</p>
-          <p>Delhi</p>
+          <p>Mumbai</p>
+          <p>Sikkim</p>
         </div>
         <div id='contact' className='flex flex-col gap-2'>
           <h1 className='font-semibold italic'>HOW TO REACH US ?</h1>
