@@ -17,9 +17,17 @@ const Apply = () => {
 
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(false);
-
+  const pattern = new RegExp(/^\d{1,10}$/);
+  const [isError, setIsError] = useState(false);
   const handleChange = (e) => {
     const { name, value, type } = e.target;
+    if (name === 'mobile_no') {
+      if (!pattern.test(e.target.value) )
+        setIsError("invalid");
+      else if (value.length !== 10 || isNaN(value))
+        setIsError("length");
+      else setIsError(false);
+    }
     setFormData({
       ...formData,
       [name]: type === 'file' ? e.target.files[0] : value,
@@ -36,7 +44,7 @@ const Apply = () => {
       }
 
       const response = await fetch('https://chanmeet.pythonanywhere.com/api/submit/', {
-        method: 'POST', 
+        method: 'POST',
         body: formDataToSend,
       });
       const data = await response.json();
@@ -93,11 +101,31 @@ const Apply = () => {
           </div>
           <div className="mb-4">
             <label htmlFor="mobile_no" className="block font-semibold">Mobile:</label>
+          <h3 className=''>
+             
+            {isError === "invalid" ? (
+              <>
+              Write valid mobile number:
+              <span className='text-red-600 font-medium'> Invalid</span>
+              </>
+            ) : isError === "length" ? (
+              <>
+              Write valid mobile number:              
+              <span className='text-red-500 font-medium'>{"+91 " + formData.mobile_no}</span>
+              </>
+            ) : (
+              <>
+              Looks good!
+              <span className='text-green-500 font-medium'>{"+91 " + formData.mobile_no}</span>
+              </>
+            )}
+          </h3>
             <input onChange={handleChange} required type="text" id="mobile_no" name="mobile_no" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Mobile" />
           </div>
+          <br />
           <div className="mb-4">
             <label htmlFor="date_of_birth" className="block font-semibold">Date Of Birth (dd-mm-yyyy):</label>
-            <input type="date" id="date_of_birth" name="date_of_birth" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Date Of Birth (dd-mm-yyyy)" onChange={handleChange} required />
+            <input type="text" id="date_of_birth" name="date_of_birth" className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1" placeholder="Date Of Birth (dd-mm-yyyy)" onChange={handleChange} required />
           </div>
           <div className="mb-4">
             <label htmlFor="alternate_mobile_no" className="block font-semibold">Alternate No.:</label>
