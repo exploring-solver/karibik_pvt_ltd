@@ -57,7 +57,7 @@ function Home() {
           <br /><p className='text-sm leading-[1.75]'>
             <span className='font-semibold text-base'>Its a Unit of Navigation Maritime Services</span>
             <br />
-            Karibik India Maritime Academy is an India’s leading Maritime Education provider located in Gurgaon, Haryana and is gradually emerging as a leader. we are working successfully last 13 years. MNITC has created the market of trust and not illusions. we assure you the best placement at highest packages accompanied by raising graph. we have an active placement team.
+            Karibik India Maritime Academy is an India's leading Maritime Education provider located in Gurgaon, Haryana and is gradually emerging as a leader. we are working successfully last 13 years. MNITC has created the market of trust and not illusions. we assure you the best placement at highest packages accompanied by raising graph. we have an active placement team.
           </p>
         </div>
       </div>
